@@ -1,0 +1,775 @@
+{
+  "id": "20261016T021922-5ee080f6",
+  "phase": "P0",
+  "status": "completed",
+  "created_at": "2026-10-16T02:40:29.508274+00:00",
+  "command": [
+    "/home/rohit/buildfiles/TN-FIR-Speech/.venv/bin/python",
+    "-m",
+    "research.lexform",
+    "baseline",
+    "--config",
+    "research/lexform/presentation.json"
+  ],
+  "environment": {
+    "python": "3.12.13",
+    "versions": {
+      "torch": "2.14.0",
+      "transformers": "5.17.0",
+      "scikit-learn": "1.9.1",
+      "numpy": "2.5.3"
+    }
+  },
+  "config": {
+    "seed": 42,
+    "encoder": "law-ai/InLegalBERT",
+    "encoder_revision": "b5ecfed8ed6cf9d25a3cb8225a8c52f161f7401a",
+    "freeze_encoder": true,
+    "feature_batch_size": 16,
+    "protocol": "supplement",
+    "bank_size": 256,
+    "dimension": 256,
+    "groups": 4,
+    "norm": "godel",
+    "variant": "and_or",
+    "pooling": "mean",
+    "truncation": "chunked",
+    "max_length": 512,
+    "statute_length": 256,
+    "max_chunks": 4,
+    "batch_size": 64,
+    "accumulation": 1,
+    "epochs": 12,
+    "learning_rate": 0.0003,
+    "loss": "asymmetric",
+    "grounding_weight": 0.1,
+    "anchor_weight": 0.1,
+    "sparsity_weight": 0.001,
+    "anchor_fraction": 0.8,
+    "target_risk": 0.25,
+    "device": "cuda"
+  },
+  "manifest": {
+    "counts": {
+      "train": 42750,
+      "dev": 10037,
+      "test": 12794
+    },
+    "sha256": {
+      "train": "54c8a18df211a841c3825bc725cab3f0042c16de38c255b6c0137167f9d025e3",
+      "dev": "58777361a8ac6f9681d6195c4ef7e8c3c61c3369211d10487eb4603f168b6a4a",
+      "test": "e4f43ab4fd163d1d72a1aab3e4baaeed6e36fe4c2de679d7058ddc5662fa321d"
+    },
+    "overlaps": {
+      "train/dev": {
+        "text": 81,
+        "ids": 0
+      },
+      "train/test": {
+        "text": 108,
+        "ids": 0
+      },
+      "dev/test": {
+        "text": 61,
+        "ids": 0
+      }
+    },
+    "protocol": "supplement",
+    "excluded_invalid_documents": {
+      "train": [
+        {
+          "id": "164441647",
+          "reason": "empty_text"
+        },
+        {
+          "id": "196702917",
+          "reason": "empty_text"
+        },
+        {
+          "id": "145143067",
+          "reason": "empty_text"
+        },
+        {
+          "id": "32130703",
+          "reason": "empty_text"
+        },
+        {
+          "id": "123246683",
+          "reason": "empty_text"
+        },
+        {
+          "id": "46979385",
+          "reason": "empty_text"
+        },
+        {
+          "id": "81431116",
+          "reason": "empty_text"
+        },
+        {
+          "id": "98057478",
+          "reason": "empty_text"
+        },
+        {
+          "id": "178192681",
+          "reason": "empty_text"
+        },
+        {
+          "id": "52293746",
+          "reason": "empty_text"
+        },
+        {
+          "id": "93855634",
+          "reason": "empty_text"
+        },
+        {
+          "id": "1237263",
+          "reason": "empty_text"
+        },
+        {
+          "id": "157348555",
+          "reason": "empty_text"
+        },
+        {
+          "id": "1078057",
+          "reason": "empty_text"
+        },
+        {
+          "id": "267987",
+          "reason": "empty_text"
+        },
+        {
+          "id": "63534497",
+          "reason": "empty_text"
+        },
+        {
+          "id": "45825818",
+          "reason": "empty_text"
+        },
+        {
+          "id": "1778225",
+          "reason": "empty_text"
+        },
+        {
+          "id": "118068268",
+          "reason": "empty_text"
+        },
+        {
+          "id": "6584492",
+          "reason": "empty_text"
+        },
+        {
+          "id": "54597139",
+          "reason": "empty_text"
+        },
+        {
+          "id": "101820879",
+          "reason": "empty_text"
+        },
+        {
+          "id": "51945564",
+          "reason": "empty_text"
+        },
+        {
+          "id": "21633349",
+          "reason": "empty_text"
+        },
+        {
+          "id": "22923250",
+          "reason": "empty_text"
+        },
+        {
+          "id": "3001360",
+          "reason": "empty_text"
+        },
+        {
+          "id": "31144754",
+          "reason": "empty_text"
+        },
+        {
+          "id": "31293183",
+          "reason": "empty_text"
+        },
+        {
+          "id": "31718198",
+          "reason": "empty_text"
+        },
+        {
+          "id": "32644612",
+          "reason": "empty_text"
+        },
+        {
+          "id": "3549164",
+          "reason": "empty_text"
+        },
+        {
+          "id": "4363075",
+          "reason": "empty_text"
+        },
+        {
+          "id": "513198",
+          "reason": "empty_text"
+        },
+        {
+          "id": "521909",
+          "reason": "empty_text"
+        },
+        {
+          "id": "56317109",
+          "reason": "empty_text"
+        },
+        {
+          "id": "60311642",
+          "reason": "empty_text"
+        },
+        {
+          "id": "66093399",
+          "reason": "empty_text"
+        },
+        {
+          "id": "66500788",
+          "reason": "empty_text"
+        },
+        {
+          "id": "78343926",
+          "reason": "empty_text"
+        },
+        {
+          "id": "92493311",
+          "reason": "empty_text"
+        },
+        {
+          "id": "93576518",
+          "reason": "empty_text"
+        },
+        {
+          "id": "94139014",
+          "reason": "empty_text"
+        },
+        {
+          "id": "99087803",
+          "reason": "empty_text"
+        },
+        {
+          "id": "103706287",
+          "reason": "empty_text"
+        },
+        {
+          "id": "1066625",
+          "reason": "empty_text"
+        },
+        {
+          "id": "109116400",
+          "reason": "empty_text"
+        },
+        {
+          "id": "111566211",
+          "reason": "empty_text"
+        },
+        {
+          "id": "115902861",
+          "reason": "empty_text"
+        },
+        {
+          "id": "11603670",
+          "reason": "empty_text"
+        },
+        {
+          "id": "127614569",
+          "reason": "empty_text"
+        },
+        {
+          "id": "128795245",
+          "reason": "empty_text"
+        },
+        {
+          "id": "131427092",
+          "reason": "empty_text"
+        },
+        {
+          "id": "135249220",
+          "reason": "empty_text"
+        },
+        {
+          "id": "138140816",
+          "reason": "empty_text"
+        },
+        {
+          "id": "142487423",
+          "reason": "empty_text"
+        },
+        {
+          "id": "149847641",
+          "reason": "empty_text"
+        },
+        {
+          "id": "1508670",
+          "reason": "empty_text"
+        },
+        {
+          "id": "157108624",
+          "reason": "empty_text"
+        },
+        {
+          "id": "1600835",
+          "reason": "empty_text"
+        },
+        {
+          "id": "160672072",
+          "reason": "empty_text"
+        },
+        {
+          "id": "161656822",
+          "reason": "empty_text"
+        },
+        {
+          "id": "1656415",
+          "reason": "empty_text"
+        },
+        {
+          "id": "170484212",
+          "reason": "empty_text"
+        },
+        {
+          "id": "65370989",
+          "reason": "empty_text"
+        },
+        {
+          "id": "57739806",
+          "reason": "empty_text"
+        },
+        {
+          "id": "171411640",
+          "reason": "empty_text"
+        },
+        {
+          "id": "86090511",
+          "reason": "empty_text"
+        },
+        {
+          "id": "1920531",
+          "reason": "empty_text"
+        },
+        {
+          "id": "15936651",
+          "reason": "empty_text"
+        },
+        {
+          "id": "1730432",
+          "reason": "empty_text"
+        },
+        {
+          "id": "160506747",
+          "reason": "empty_text"
+        },
+        {
+          "id": "173620236",
+          "reason": "empty_text"
+        },
+        {
+          "id": "174278831",
+          "reason": "empty_text"
+        },
+        {
+          "id": "182334218",
+          "reason": "empty_text"
+        },
+        {
+          "id": "184081125",
+          "reason": "empty_text"
+        },
+        {
+          "id": "185871969",
+          "reason": "empty_text"
+        },
+        {
+          "id": "186670638",
+          "reason": "empty_text"
+        },
+        {
+          "id": "187705887",
+          "reason": "empty_text"
+        },
+        {
+          "id": "189001775",
+          "reason": "empty_text"
+        },
+        {
+          "id": "193507583",
+          "reason": "empty_text"
+        },
+        {
+          "id": "196100215",
+          "reason": "empty_text"
+        },
+        {
+          "id": "196296630",
+          "reason": "empty_text"
+        },
+        {
+          "id": "196431170",
+          "reason": "empty_text"
+        },
+        {
+          "id": "197710713",
+          "reason": "empty_text"
+        },
+        {
+          "id": "198571257",
+          "reason": "empty_text"
+        }
+      ],
+      "dev": [
+        {
+          "id": "155741120",
+          "reason": "empty_text"
+        },
+        {
+          "id": "34352930",
+          "reason": "empty_text"
+        },
+        {
+          "id": "37131657",
+          "reason": "empty_text"
+        },
+        {
+          "id": "374262",
+          "reason": "empty_text"
+        },
+        {
+          "id": "44607748",
+          "reason": "empty_text"
+        },
+        {
+          "id": "6867831",
+          "reason": "empty_text"
+        },
+        {
+          "id": "809725",
+          "reason": "empty_text"
+        },
+        {
+          "id": "86476794",
+          "reason": "empty_text"
+        },
+        {
+          "id": "99770839",
+          "reason": "empty_text"
+        },
+        {
+          "id": "101681966",
+          "reason": "empty_text"
+        },
+        {
+          "id": "102688294",
+          "reason": "empty_text"
+        },
+        {
+          "id": "135511178",
+          "reason": "empty_text"
+        },
+        {
+          "id": "143032411",
+          "reason": "empty_text"
+        },
+        {
+          "id": "162073396",
+          "reason": "empty_text"
+        },
+        {
+          "id": "168228146",
+          "reason": "empty_text"
+        },
+        {
+          "id": "168594834",
+          "reason": "empty_text"
+        },
+        {
+          "id": "168807950",
+          "reason": "empty_text"
+        },
+        {
+          "id": "186569325",
+          "reason": "empty_text"
+        },
+        {
+          "id": "60514258",
+          "reason": "empty_text"
+        }
+      ],
+      "test": [
+        {
+          "id": "125467569",
+          "reason": "empty_text"
+        },
+        {
+          "id": "148010810",
+          "reason": "empty_text"
+        },
+        {
+          "id": "178188017",
+          "reason": "empty_text"
+        },
+        {
+          "id": "52382710",
+          "reason": "empty_text"
+        },
+        {
+          "id": "62555930",
+          "reason": "empty_text"
+        },
+        {
+          "id": "57729657",
+          "reason": "empty_text"
+        },
+        {
+          "id": "2648738",
+          "reason": "empty_text"
+        },
+        {
+          "id": "420963",
+          "reason": "empty_text"
+        },
+        {
+          "id": "472996",
+          "reason": "empty_text"
+        },
+        {
+          "id": "480258",
+          "reason": "empty_text"
+        },
+        {
+          "id": "53086541",
+          "reason": "empty_text"
+        },
+        {
+          "id": "71530851",
+          "reason": "empty_text"
+        },
+        {
+          "id": "88594815",
+          "reason": "empty_text"
+        },
+        {
+          "id": "118831747",
+          "reason": "empty_text"
+        },
+        {
+          "id": "124261178",
+          "reason": "empty_text"
+        },
+        {
+          "id": "148955279",
+          "reason": "empty_text"
+        },
+        {
+          "id": "1532438",
+          "reason": "empty_text"
+        },
+        {
+          "id": "124800957",
+          "reason": "empty_text"
+        },
+        {
+          "id": "185601934",
+          "reason": "empty_text"
+        },
+        {
+          "id": "1982553",
+          "reason": "empty_text"
+        }
+      ]
+    },
+    "original_counts": {
+      "train": 42835,
+      "dev": 10200,
+      "test": 13039
+    },
+    "excluded_overlap_documents": {
+      "dev": 144,
+      "test": 225
+    },
+    "expected_original_counts": {
+      "train": 42835,
+      "dev": 10200,
+      "test": 13039
+    },
+    "full_split": true
+  },
+  "metrics": {
+    "micro_f1": 0.5043385261118735,
+    "macro_f1": 0.3901056112253022,
+    "precision": 0.5058287795992714,
+    "recall": 0.5028570278862018,
+    "labels_used": 98,
+    "labels_total": 100,
+    "documents": 12794
+  },
+  "threshold": 0.5499999999999999,
+  "labels": [
+    "2",
+    "3",
+    "4",
+    "5",
+    "13",
+    "34",
+    "107",
+    "109",
+    "114",
+    "120",
+    "120B",
+    "143",
+    "147",
+    "148",
+    "149",
+    "155",
+    "156",
+    "161",
+    "164",
+    "173",
+    "174A",
+    "186",
+    "188",
+    "190",
+    "193",
+    "200",
+    "201",
+    "228",
+    "229A",
+    "279",
+    "294",
+    "294",
+    "299",
+    "300",
+    "302",
+    "304",
+    "304A",
+    "304B",
+    "306",
+    "307",
+    "308",
+    "313",
+    "320",
+    "323",
+    "324",
+    "325",
+    "326",
+    "332",
+    "336",
+    "337",
+    "338",
+    "341",
+    "342",
+    "353",
+    "354",
+    "363",
+    "364",
+    "365",
+    "366",
+    "366A",
+    "375",
+    "376",
+    "376",
+    "379",
+    "380",
+    "384",
+    "389",
+    "392",
+    "394",
+    "395",
+    "397",
+    "406",
+    "409",
+    "411",
+    "415",
+    "417",
+    "419",
+    "420",
+    "427",
+    "436",
+    "437",
+    "438",
+    "447",
+    "448",
+    "450",
+    "452",
+    "457",
+    "465",
+    "467",
+    "468",
+    "471",
+    "482",
+    "494",
+    "498",
+    "498A",
+    "500",
+    "504",
+    "506",
+    "509",
+    "511"
+  ],
+  "model": "tfidf+ovr-logistic",
+  "tfidf_settings": {
+    "ngram_range": [
+      1,
+      2
+    ],
+    "min_df": 3,
+    "max_features": 200000,
+    "sublinear_tf": true,
+    "vectorizer": "auto",
+    "hashing_above_docs": 20000,
+    "hashing_features": 262144,
+    "hashing_chunk_docs": 8000,
+    "C": 4.0,
+    "max_iter": 1000,
+    "n_jobs": 2
+  },
+  "class_weight": "balanced",
+  "solver": "liblinear",
+  "gate_passed": true,
+  "historical_reference_applicable": false,
+  "dataset_provenance": {
+    "profile": "sigr-ilsi",
+    "canonical_zenodo_files": false,
+    "source": "Public SIGR-Law research supplement on Kaggle",
+    "note": "Anonymized derivative. Historical raw-ILSI scores are not directly comparable.",
+    "files": {
+      "train": {
+        "count": 42835,
+        "sha256": "54c8a18df211a841c3825bc725cab3f0042c16de38c255b6c0137167f9d025e3",
+        "source_sha256": "d5556ce121c657283fbdf0b9adb571bf8eaf4aab364b4fcded64b44f3f60038d",
+        "source_dataset": "abhishekkk2002/sigr-law",
+        "source_file": "supplementary/ILSI/train2.json"
+      },
+      "dev": {
+        "count": 10200,
+        "sha256": "58777361a8ac6f9681d6195c4ef7e8c3c61c3369211d10487eb4603f168b6a4a",
+        "source_sha256": "5ca832ddb51561f2bdd26c0a994d2484df7b2ae44b124c430626eeeb1d0f9206",
+        "source_dataset": "abhishekkk2002/sigr-law",
+        "source_file": "supplementary/ILSI/dev2.json"
+      },
+      "test": {
+        "count": 13039,
+        "sha256": "e4f43ab4fd163d1d72a1aab3e4baaeed6e36fe4c2de679d7058ddc5662fa321d",
+        "source_sha256": "8dd8de07ede540f9c0dfbc3fa4932e5a3944c73413a4818c57d0cdf6d682eca1",
+        "source_dataset": "abhishekkk2002/sigr-law",
+        "source_file": "supplementary/ILSI/test2.json"
+      },
+      "secs": {
+        "count": 100,
+        "sha256": "de64631b9190374d0db1026f704c9a1b9ba1e2916a28866672f3802dae19a89a",
+        "source_sha256": "d3379f0b3272fc50c8b708a7b2382d295e6abb5d3bfc087a198076bca528e1cb",
+        "source_dataset": "abhishekkk2002/ilsi-law",
+        "source_file": "secs.json"
+      }
+    }
+  },
+  "gate_protocol": "full-split supplemental baseline measured",
+  "baseline_reference": {
+    "micro_f1": 0.7,
+    "macro_f1": 0.58,
+    "source": "user-supplied historical result"
+  },
+  "vectorizer": "hashing",
+  "train_seconds": 1218.9864541049992
+}

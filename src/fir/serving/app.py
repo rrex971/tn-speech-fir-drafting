@@ -1,6 +1,7 @@
 from __future__ import annotations
 from contextlib import asynccontextmanager
 import importlib.util
+import os
 import threading
 import time
 from pathlib import Path
@@ -14,6 +15,8 @@ from fir.schema.if1 import FirRecord
 from fir.schema.statute_decision import StatuteDecision
 from fir.serving import recordings
 from fir.statute.ipc_bns_map import IpcBnsMap
+os.environ['HF_HUB_OFFLINE'] = '1'
+os.environ['HF_HUB_DISABLE_TELEMETRY'] = '1'
 MAX_AUDIO_BYTES = 25 * 1024 * 1024
 _AUDIO_SUFFIXES = {'.wav', '.mp3', '.m4a', '.mp4', '.webm', '.ogg', '.opus', '.flac'}
 _AUDIO_MIME_SUFFIX = {'audio/webm': '.webm', 'video/webm': '.webm', 'audio/mp4': '.m4a', 'audio/x-m4a': '.m4a', 'audio/ogg': '.ogg', 'audio/opus': '.opus', 'audio/wav': '.wav', 'audio/x-wav': '.wav', 'audio/wave': '.wav', 'audio/mpeg': '.mp3', 'audio/flac': '.flac', 'audio/x-flac': '.flac'}
@@ -243,6 +246,7 @@ async def lifespan(_app: FastAPI):
         ('audio_translation', lambda: speech_runtime.audio_translator().load()),
         ('text_translation', lambda: speech_runtime.translator().load() if speech_runtime.translator().available() else None),
         ('classifier', draft_runtime.graph),
+        ('lexform', lambda: __import__('research.lexform.api', fromlist=['warm_checkpoint']).warm_checkpoint()),
     ):
         try:
             load()
@@ -252,6 +256,9 @@ async def lifespan(_app: FastAPI):
     yield
 
 app = FastAPI(title='TN FIR Speech', version='0.1.0', description='Tamil speech, translation and officer-assisted IF-1 drafting prototype', lifespan=lifespan)
+
+from research.lexform.api import router as lexform_router
+app.include_router(lexform_router)
 
 @app.get('/v1/capabilities', response_model=Capabilities)
 def capabilities() -> Capabilities:

@@ -1,0 +1,12 @@
+{
+  "threshold": 1.000001,
+  "floor": 1.0,
+  "coverage": 0.0,
+  "risk": null,
+  "accepted_documents": 0,
+  "target_risk": 0.25,
+  "calibration_split": "dev",
+  "risk_definition": "mean(1 - document F1) among documents with at least one emitted section",
+  "feasible": false,
+  "minimum_accepted": 30
+}

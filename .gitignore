@@ -16,3 +16,6 @@ artifacts/audit/*
 .mypy_cache/
 *.tsbuildinfo
 .DS_Store
+artifacts/lexform/
+data/ilsi/
+*.gguf

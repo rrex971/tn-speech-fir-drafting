@@ -32,6 +32,7 @@ import { useEffect, useMemo, useRef, useState } from 'react'
 import Markdown from 'react-markdown'
 import remarkGfm from 'remark-gfm'
 import { FirFormPreview } from './FirFormPreview'
+import { LexFormPanel } from './LexFormPanel'
 import type { Capabilities, DraftResponse, RecordingDetail, RecordingStatus, RecordingSummary, SpeechProcessResponse, TextTranslationResponse } from './types'
 
 const emptyCapabilities: Capabilities = {
@@ -685,6 +686,7 @@ export function App() {
             </div>
           </Collapse>
         </section>
+        <LexFormPanel english={english} />
       </main>
     </div>
   )

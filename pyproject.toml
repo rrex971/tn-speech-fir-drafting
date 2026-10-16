@@ -16,6 +16,14 @@ dependencies = [
 ]
 
 [project.optional-dependencies]
+research = [
+  "torch>=2.7,<3",
+  "transformers>=4.54,<6",
+  "scikit-learn>=1.7,<2",
+  "numpy>=2.0,<3",
+  "joblib>=1.5,<2",
+]
+decomposition = ["llama-cpp-python>=0.3,<1"]
 speech = [
   "faster-whisper>=1.2,<2",
   "huggingface-hub>=0.34,<2",
@@ -53,7 +61,7 @@ full = [
 tn-fir = "fir.__main__:main"
 
 [tool.hatch.build.targets.wheel]
-packages = ["src/fir"]
+packages = ["src/fir", "research"]
 
 [tool.ruff]
 line-length = 100

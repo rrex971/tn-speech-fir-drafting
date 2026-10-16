@@ -1,0 +1,1008 @@
+{
+  "id": "lexform-grounded-v1-calibration",
+  "phase": "P4",
+  "status": "completed",
+  "created_at": "2026-10-16T02:42:29.496435+00:00",
+  "command": [
+    "/home/rohit/buildfiles/TN-FIR-Speech/.venv/bin/python",
+    "-m",
+    "research.lexform",
+    "calibrate",
+    "--checkpoint",
+    "artifacts/lexform/runs/lexform-grounded-v1",
+    "--run-id",
+    "lexform-grounded-v1-calibration"
+  ],
+  "environment": {
+    "python": "3.12.13",
+    "versions": {
+      "torch": "2.14.0",
+      "transformers": "5.17.0",
+      "scikit-learn": "1.9.1",
+      "numpy": "2.5.3"
+    }
+  },
+  "checkpoint_id": "lexform-grounded-v1",
+  "config": {
+    "seed": 42,
+    "encoder": "law-ai/InLegalBERT",
+    "encoder_revision": "b5ecfed8ed6cf9d25a3cb8225a8c52f161f7401a",
+    "freeze_encoder": true,
+    "feature_batch_size": 16,
+    "protocol": "supplement",
+    "bank_initialization": "grounded",
+    "bank_size": 256,
+    "dimension": 256,
+    "groups": 4,
+    "norm": "godel",
+    "variant": "and_or",
+    "pooling": "mean",
+    "truncation": "chunked",
+    "max_length": 512,
+    "statute_length": 256,
+    "max_chunks": 4,
+    "batch_size": 64,
+    "accumulation": 1,
+    "epochs": 12,
+    "learning_rate": 0.0003,
+    "loss": "asymmetric",
+    "grounding_weight": 0.1,
+    "anchor_weight": 0.1,
+    "sparsity_weight": 0.001,
+    "anchor_fraction": 0.8,
+    "target_risk": 0.25,
+    "device": "cuda"
+  },
+  "calibration": {
+    "threshold": 1.000001,
+    "floor": 1.0,
+    "coverage": 0.0,
+    "risk": null,
+    "accepted_documents": 0,
+    "target_risk": 0.25,
+    "calibration_split": "dev",
+    "risk_definition": "mean(1 - document F1) among documents with at least one emitted section",
+    "feasible": false,
+    "minimum_accepted": 30
+  },
+  "metrics": {
+    "micro_f1": 0.0,
+    "macro_f1": 0.0,
+    "precision": 0.0,
+    "recall": 0.0,
+    "labels_used": 0,
+    "labels_total": 100,
+    "documents": 12794
+  },
+  "selective": {
+    "coverage": 0.0,
+    "risk": null,
+    "accepted_documents": 0
+  },
+  "risk_coverage": [
+    {
+      "coverage": 0.0,
+      "risk": null,
+      "accepted_documents": 0,
+      "threshold": 1.0
+    },
+    {
+      "coverage": 0.0,
+      "risk": null,
+      "accepted_documents": 0,
+      "threshold": 0.98
+    },
+    {
+      "coverage": 0.0,
+      "risk": null,
+      "accepted_documents": 0,
+      "threshold": 0.96
+    },
+    {
+      "coverage": 0.0,
+      "risk": null,
+      "accepted_documents": 0,
+      "threshold": 0.94
+    },
+    {
+      "coverage": 0.0,
+      "risk": null,
+      "accepted_documents": 0,
+      "threshold": 0.92
+    },
+    {
+      "coverage": 0.0,
+      "risk": null,
+      "accepted_documents": 0,
+      "threshold": 0.9
+    },
+    {
+      "coverage": 0.0,
+      "risk": null,
+      "accepted_documents": 0,
+      "threshold": 0.88
+    },
+    {
+      "coverage": 0.0,
+      "risk": null,
+      "accepted_documents": 0,
+      "threshold": 0.86
+    },
+    {
+      "coverage": 0.0,
+      "risk": null,
+      "accepted_documents": 0,
+      "threshold": 0.84
+    },
+    {
+      "coverage": 0.0,
+      "risk": null,
+      "accepted_documents": 0,
+      "threshold": 0.8200000000000001
+    },
+    {
+      "coverage": 0.0,
+      "risk": null,
+      "accepted_documents": 0,
+      "threshold": 0.8
+    },
+    {
+      "coverage": 0.0,
+      "risk": null,
+      "accepted_documents": 0,
+      "threshold": 0.78
+    },
+    {
+      "coverage": 0.0,
+      "risk": null,
+      "accepted_documents": 0,
+      "threshold": 0.76
+    },
+    {
+      "coverage": 0.0,
+      "risk": null,
+      "accepted_documents": 0,
+      "threshold": 0.74
+    },
+    {
+      "coverage": 0.0,
+      "risk": null,
+      "accepted_documents": 0,
+      "threshold": 0.72
+    },
+    {
+      "coverage": 0.0,
+      "risk": null,
+      "accepted_documents": 0,
+      "threshold": 0.7
+    },
+    {
+      "coverage": 0.0,
+      "risk": null,
+      "accepted_documents": 0,
+      "threshold": 0.6799999999999999
+    },
+    {
+      "coverage": 0.0,
+      "risk": null,
+      "accepted_documents": 0,
+      "threshold": 0.6599999999999999
+    },
+    {
+      "coverage": 0.0,
+      "risk": null,
+      "accepted_documents": 0,
+      "threshold": 0.64
+    },
+    {
+      "coverage": 0.0,
+      "risk": null,
+      "accepted_documents": 0,
+      "threshold": 0.62
+    },
+    {
+      "coverage": 0.0,
+      "risk": null,
+      "accepted_documents": 0,
+      "threshold": 0.6
+    },
+    {
+      "coverage": 0.0,
+      "risk": null,
+      "accepted_documents": 0,
+      "threshold": 0.5800000000000001
+    },
+    {
+      "coverage": 0.0,
+      "risk": null,
+      "accepted_documents": 0,
+      "threshold": 0.56
+    },
+    {
+      "coverage": 0.0,
+      "risk": null,
+      "accepted_documents": 0,
+      "threshold": 0.54
+    },
+    {
+      "coverage": 0.0,
+      "risk": null,
+      "accepted_documents": 0,
+      "threshold": 0.52
+    },
+    {
+      "coverage": 0.0,
+      "risk": null,
+      "accepted_documents": 0,
+      "threshold": 0.5
+    },
+    {
+      "coverage": 0.0,
+      "risk": null,
+      "accepted_documents": 0,
+      "threshold": 0.48
+    },
+    {
+      "coverage": 0.0,
+      "risk": null,
+      "accepted_documents": 0,
+      "threshold": 0.45999999999999996
+    },
+    {
+      "coverage": 0.0,
+      "risk": null,
+      "accepted_documents": 0,
+      "threshold": 0.43999999999999995
+    },
+    {
+      "coverage": 0.0,
+      "risk": null,
+      "accepted_documents": 0,
+      "threshold": 0.42000000000000004
+    },
+    {
+      "coverage": 0.0,
+      "risk": null,
+      "accepted_documents": 0,
+      "threshold": 0.4
+    },
+    {
+      "coverage": 0.0,
+      "risk": null,
+      "accepted_documents": 0,
+      "threshold": 0.38
+    },
+    {
+      "coverage": 0.0,
+      "risk": null,
+      "accepted_documents": 0,
+      "threshold": 0.36
+    },
+    {
+      "coverage": 0.0,
+      "risk": null,
+      "accepted_documents": 0,
+      "threshold": 0.33999999999999997
+    },
+    {
+      "coverage": 0.0,
+      "risk": null,
+      "accepted_documents": 0,
+      "threshold": 0.31999999999999995
+    },
+    {
+      "coverage": 0.0,
+      "risk": null,
+      "accepted_documents": 0,
+      "threshold": 0.29999999999999993
+    },
+    {
+      "coverage": 0.0,
+      "risk": null,
+      "accepted_documents": 0,
+      "threshold": 0.28
+    },
+    {
+      "coverage": 0.0,
+      "risk": null,
+      "accepted_documents": 0,
+      "threshold": 0.26
+    },
+    {
+      "coverage": 0.0,
+      "risk": null,
+      "accepted_documents": 0,
+      "threshold": 0.24
+    },
+    {
+      "coverage": 0.0,
+      "risk": null,
+      "accepted_documents": 0,
+      "threshold": 0.21999999999999997
+    },
+    {
+      "coverage": 0.0,
+      "risk": null,
+      "accepted_documents": 0,
+      "threshold": 0.19999999999999996
+    },
+    {
+      "coverage": 0.0,
+      "risk": null,
+      "accepted_documents": 0,
+      "threshold": 0.17999999999999994
+    },
+    {
+      "coverage": 0.0,
+      "risk": null,
+      "accepted_documents": 0,
+      "threshold": 0.16000000000000003
+    },
+    {
+      "coverage": 0.0,
+      "risk": null,
+      "accepted_documents": 0,
+      "threshold": 0.14
+    },
+    {
+      "coverage": 0.0,
+      "risk": null,
+      "accepted_documents": 0,
+      "threshold": 0.12
+    },
+    {
+      "coverage": 0.0,
+      "risk": null,
+      "accepted_documents": 0,
+      "threshold": 0.09999999999999998
+    },
+    {
+      "coverage": 0.0,
+      "risk": null,
+      "accepted_documents": 0,
+      "threshold": 0.07999999999999996
+    },
+    {
+      "coverage": 0.0,
+      "risk": null,
+      "accepted_documents": 0,
+      "threshold": 0.05999999999999994
+    },
+    {
+      "coverage": 0.0,
+      "risk": null,
+      "accepted_documents": 0,
+      "threshold": 0.040000000000000036
+    },
+    {
+      "coverage": 0.0,
+      "risk": null,
+      "accepted_documents": 0,
+      "threshold": 0.020000000000000018
+    },
+    {
+      "coverage": 0.0,
+      "risk": null,
+      "accepted_documents": 0,
+      "threshold": 0.0
+    }
+  ],
+  "baseline_risk_coverage": [
+    {
+      "coverage": 0.0,
+      "risk": null,
+      "accepted_documents": 0,
+      "threshold": 1.0
+    },
+    {
+      "coverage": 0.18453962795060183,
+      "risk": 0.512668633735329,
+      "accepted_documents": 2361,
+      "threshold": 0.98
+    },
+    {
+      "coverage": 0.3038142879474754,
+      "risk": 0.5124238610315437,
+      "accepted_documents": 3887,
+      "threshold": 0.96
+    },
+    {
+      "coverage": 0.3894012818508676,
+      "risk": 0.5013783792489379,
+      "accepted_documents": 4982,
+      "threshold": 0.94
+    },
+    {
+      "coverage": 0.4527903704861654,
+      "risk": 0.4977999425947793,
+      "accepted_documents": 5793,
+      "threshold": 0.92
+    },
+    {
+      "coverage": 0.5049241832108801,
+      "risk": 0.4953361955146936,
+      "accepted_documents": 6460,
+      "threshold": 0.9
+    },
+    {
+      "coverage": 0.5527591058308582,
+      "risk": 0.4938712447644362,
+      "accepted_documents": 7072,
+      "threshold": 0.88
+    },
+    {
+      "coverage": 0.5942629357511333,
+      "risk": 0.4922338723420993,
+      "accepted_documents": 7603,
+      "threshold": 0.86
+    },
+    {
+      "coverage": 0.6319368453962795,
+      "risk": 0.4918521791780751,
+      "accepted_documents": 8085,
+      "threshold": 0.84
+    },
+    {
+      "coverage": 0.6605440050023449,
+      "risk": 0.4883159322416796,
+      "accepted_documents": 8451,
+      "threshold": 0.8200000000000001
+    },
+    {
+      "coverage": 0.6898546193528217,
+      "risk": 0.48692832913730355,
+      "accepted_documents": 8826,
+      "threshold": 0.8
+    },
+    {
+      "coverage": 0.7147881819602939,
+      "risk": 0.48539240456521654,
+      "accepted_documents": 9145,
+      "threshold": 0.78
+    },
+    {
+      "coverage": 0.7357355010161013,
+      "risk": 0.48308443137727336,
+      "accepted_documents": 9413,
+      "threshold": 0.76
+    },
+    {
+      "coverage": 0.7564483351571049,
+      "risk": 0.4818906404664178,
+      "accepted_documents": 9678,
+      "threshold": 0.74
+    },
+    {
+      "coverage": 0.7772393309363764,
+      "risk": 0.4811765657888231,
+      "accepted_documents": 9944,
+      "threshold": 0.72
+    },
+    {
+      "coverage": 0.7978740034391121,
+      "risk": 0.48128973715866885,
+      "accepted_documents": 10208,
+      "threshold": 0.7
+    },
+    {
+      "coverage": 0.8151477254963264,
+      "risk": 0.48247907058916956,
+      "accepted_documents": 10429,
+      "threshold": 0.6799999999999999
+    },
+    {
+      "coverage": 0.8310926997029858,
+      "risk": 0.48312258485207665,
+      "accepted_documents": 10633,
+      "threshold": 0.6599999999999999
+    },
+    {
+      "coverage": 0.844692824761607,
+      "risk": 0.48322716306721547,
+      "accepted_documents": 10807,
+      "threshold": 0.64
+    },
+    {
+      "coverage": 0.8588400812881039,
+      "risk": 0.485018992387211,
+      "accepted_documents": 10988,
+      "threshold": 0.62
+    },
+    {
+      "coverage": 0.8714241050492418,
+      "risk": 0.48583480345043567,
+      "accepted_documents": 11149,
+      "threshold": 0.6
+    },
+    {
+      "coverage": 0.8833828357042364,
+      "risk": 0.48716881930663586,
+      "accepted_documents": 11302,
+      "threshold": 0.5800000000000001
+    },
+    {
+      "coverage": 0.8976082538690011,
+      "risk": 0.4909188160335636,
+      "accepted_documents": 11484,
+      "threshold": 0.56
+    },
+    {
+      "coverage": 0.9075347819290293,
+      "risk": 0.49330249055461645,
+      "accepted_documents": 11611,
+      "threshold": 0.54
+    },
+    {
+      "coverage": 0.9189463811161482,
+      "risk": 0.49569187289699934,
+      "accepted_documents": 11757,
+      "threshold": 0.52
+    },
+    {
+      "coverage": 0.9290292324527122,
+      "risk": 0.4988137578831561,
+      "accepted_documents": 11886,
+      "threshold": 0.5
+    },
+    {
+      "coverage": 0.938174144130061,
+      "risk": 0.5031150182156484,
+      "accepted_documents": 12003,
+      "threshold": 0.48
+    },
+    {
+      "coverage": 0.947006409254338,
+      "risk": 0.5065160777360633,
+      "accepted_documents": 12116,
+      "threshold": 0.45999999999999996
+    },
+    {
+      "coverage": 0.9549788963576676,
+      "risk": 0.5096230107895026,
+      "accepted_documents": 12218,
+      "threshold": 0.43999999999999995
+    },
+    {
+      "coverage": 0.9617789588869783,
+      "risk": 0.5136666061132145,
+      "accepted_documents": 12305,
+      "threshold": 0.42000000000000004
+    },
+    {
+      "coverage": 0.9679537283101454,
+      "risk": 0.5188246657652722,
+      "accepted_documents": 12384,
+      "threshold": 0.4
+    },
+    {
+      "coverage": 0.9742066593715805,
+      "risk": 0.5245084524241622,
+      "accepted_documents": 12464,
+      "threshold": 0.38
+    },
+    {
+      "coverage": 0.9800687822416758,
+      "risk": 0.5310079860922713,
+      "accepted_documents": 12539,
+      "threshold": 0.36
+    },
+    {
+      "coverage": 0.9853837736438956,
+      "risk": 0.5378775540729329,
+      "accepted_documents": 12607,
+      "threshold": 0.33999999999999997
+    },
+    {
+      "coverage": 0.9887447240894169,
+      "risk": 0.5447590002368332,
+      "accepted_documents": 12650,
+      "threshold": 0.31999999999999995
+    },
+    {
+      "coverage": 0.9921056745349383,
+      "risk": 0.5530416431605238,
+      "accepted_documents": 12693,
+      "threshold": 0.29999999999999993
+    },
+    {
+      "coverage": 0.9949976551508519,
+      "risk": 0.5622772464111162,
+      "accepted_documents": 12730,
+      "threshold": 0.28
+    },
+    {
+      "coverage": 0.9968735344692825,
+      "risk": 0.5725140708559517,
+      "accepted_documents": 12754,
+      "threshold": 0.26
+    },
+    {
+      "coverage": 0.9985930905111771,
+      "risk": 0.5836924914283447,
+      "accepted_documents": 12776,
+      "threshold": 0.24
+    },
+    {
+      "coverage": 0.9993747068938565,
+      "risk": 0.5962663096995215,
+      "accepted_documents": 12786,
+      "threshold": 0.21999999999999997
+    },
+    {
+      "coverage": 0.9997655150851962,
+      "risk": 0.6093140444635228,
+      "accepted_documents": 12791,
+      "threshold": 0.19999999999999996
+    },
+    {
+      "coverage": 1.0,
+      "risk": 0.6243739020916236,
+      "accepted_documents": 12794,
+      "threshold": 0.17999999999999994
+    },
+    {
+      "coverage": 1.0,
+      "risk": 0.6421222644736209,
+      "accepted_documents": 12794,
+      "threshold": 0.16000000000000003
+    },
+    {
+      "coverage": 1.0,
+      "risk": 0.6614203815607304,
+      "accepted_documents": 12794,
+      "threshold": 0.14
+    },
+    {
+      "coverage": 1.0,
+      "risk": 0.6828952484073652,
+      "accepted_documents": 12794,
+      "threshold": 0.12
+    },
+    {
+      "coverage": 1.0,
+      "risk": 0.7078221701113312,
+      "accepted_documents": 12794,
+      "threshold": 0.09999999999999998
+    },
+    {
+      "coverage": 1.0,
+      "risk": 0.7369822042650414,
+      "accepted_documents": 12794,
+      "threshold": 0.07999999999999996
+    },
+    {
+      "coverage": 1.0,
+      "risk": 0.7712938065350913,
+      "accepted_documents": 12794,
+      "threshold": 0.05999999999999994
+    },
+    {
+      "coverage": 1.0,
+      "risk": 0.812070210716209,
+      "accepted_documents": 12794,
+      "threshold": 0.040000000000000036
+    },
+    {
+      "coverage": 1.0,
+      "risk": 0.8626786873789006,
+      "accepted_documents": 12794,
+      "threshold": 0.020000000000000018
+    },
+    {
+      "coverage": 1.0,
+      "risk": 0.9262808565498184,
+      "accepted_documents": 12794,
+      "threshold": 0.0
+    }
+  ],
+  "matched_coverage": [
+    {
+      "coverage": 0.0,
+      "risk": null,
+      "baseline_coverage": 0.0,
+      "baseline_risk": null
+    },
+    {
+      "coverage": 0.0,
+      "risk": null,
+      "baseline_coverage": 0.0,
+      "baseline_risk": null
+    },
+    {
+      "coverage": 0.0,
+      "risk": null,
+      "baseline_coverage": 0.0,
+      "baseline_risk": null
+    },
+    {
+      "coverage": 0.0,
+      "risk": null,
+      "baseline_coverage": 0.0,
+      "baseline_risk": null
+    },
+    {
+      "coverage": 0.0,
+      "risk": null,
+      "baseline_coverage": 0.0,
+      "baseline_risk": null
+    },
+    {
+      "coverage": 0.0,
+      "risk": null,
+      "baseline_coverage": 0.0,
+      "baseline_risk": null
+    },
+    {
+      "coverage": 0.0,
+      "risk": null,
+      "baseline_coverage": 0.0,
+      "baseline_risk": null
+    },
+    {
+      "coverage": 0.0,
+      "risk": null,
+      "baseline_coverage": 0.0,
+      "baseline_risk": null
+    },
+    {
+      "coverage": 0.0,
+      "risk": null,
+      "baseline_coverage": 0.0,
+      "baseline_risk": null
+    },
+    {
+      "coverage": 0.0,
+      "risk": null,
+      "baseline_coverage": 0.0,
+      "baseline_risk": null
+    },
+    {
+      "coverage": 0.0,
+      "risk": null,
+      "baseline_coverage": 0.0,
+      "baseline_risk": null
+    },
+    {
+      "coverage": 0.0,
+      "risk": null,
+      "baseline_coverage": 0.0,
+      "baseline_risk": null
+    },
+    {
+      "coverage": 0.0,
+      "risk": null,
+      "baseline_coverage": 0.0,
+      "baseline_risk": null
+    },
+    {
+      "coverage": 0.0,
+      "risk": null,
+      "baseline_coverage": 0.0,
+      "baseline_risk": null
+    },
+    {
+      "coverage": 0.0,
+      "risk": null,
+      "baseline_coverage": 0.0,
+      "baseline_risk": null
+    },
+    {
+      "coverage": 0.0,
+      "risk": null,
+      "baseline_coverage": 0.0,
+      "baseline_risk": null
+    },
+    {
+      "coverage": 0.0,
+      "risk": null,
+      "baseline_coverage": 0.0,
+      "baseline_risk": null
+    },
+    {
+      "coverage": 0.0,
+      "risk": null,
+      "baseline_coverage": 0.0,
+      "baseline_risk": null
+    },
+    {
+      "coverage": 0.0,
+      "risk": null,
+      "baseline_coverage": 0.0,
+      "baseline_risk": null
+    },
+    {
+      "coverage": 0.0,
+      "risk": null,
+      "baseline_coverage": 0.0,
+      "baseline_risk": null
+    },
+    {
+      "coverage": 0.0,
+      "risk": null,
+      "baseline_coverage": 0.0,
+      "baseline_risk": null
+    },
+    {
+      "coverage": 0.0,
+      "risk": null,
+      "baseline_coverage": 0.0,
+      "baseline_risk": null
+    },
+    {
+      "coverage": 0.0,
+      "risk": null,
+      "baseline_coverage": 0.0,
+      "baseline_risk": null
+    },
+    {
+      "coverage": 0.0,
+      "risk": null,
+      "baseline_coverage": 0.0,
+      "baseline_risk": null
+    },
+    {
+      "coverage": 0.0,
+      "risk": null,
+      "baseline_coverage": 0.0,
+      "baseline_risk": null
+    },
+    {
+      "coverage": 0.0,
+      "risk": null,
+      "baseline_coverage": 0.0,
+      "baseline_risk": null
+    },
+    {
+      "coverage": 0.0,
+      "risk": null,
+      "baseline_coverage": 0.0,
+      "baseline_risk": null
+    },
+    {
+      "coverage": 0.0,
+      "risk": null,
+      "baseline_coverage": 0.0,
+      "baseline_risk": null
+    },
+    {
+      "coverage": 0.0,
+      "risk": null,
+      "baseline_coverage": 0.0,
+      "baseline_risk": null
+    },
+    {
+      "coverage": 0.0,
+      "risk": null,
+      "baseline_coverage": 0.0,
+      "baseline_risk": null
+    },
+    {
+      "coverage": 0.0,
+      "risk": null,
+      "baseline_coverage": 0.0,
+      "baseline_risk": null
+    },
+    {
+      "coverage": 0.0,
+      "risk": null,
+      "baseline_coverage": 0.0,
+      "baseline_risk": null
+    },
+    {
+      "coverage": 0.0,
+      "risk": null,
+      "baseline_coverage": 0.0,
+      "baseline_risk": null
+    },
+    {
+      "coverage": 0.0,
+      "risk": null,
+      "baseline_coverage": 0.0,
+      "baseline_risk": null
+    },
+    {
+      "coverage": 0.0,
+      "risk": null,
+      "baseline_coverage": 0.0,
+      "baseline_risk": null
+    },
+    {
+      "coverage": 0.0,
+      "risk": null,
+      "baseline_coverage": 0.0,
+      "baseline_risk": null
+    },
+    {
+      "coverage": 0.0,
+      "risk": null,
+      "baseline_coverage": 0.0,
+      "baseline_risk": null
+    },
+    {
+      "coverage": 0.0,
+      "risk": null,
+      "baseline_coverage": 0.0,
+      "baseline_risk": null
+    },
+    {
+      "coverage": 0.0,
+      "risk": null,
+      "baseline_coverage": 0.0,
+      "baseline_risk": null
+    },
+    {
+      "coverage": 0.0,
+      "risk": null,
+      "baseline_coverage": 0.0,
+      "baseline_risk": null
+    },
+    {
+      "coverage": 0.0,
+      "risk": null,
+      "baseline_coverage": 0.0,
+      "baseline_risk": null
+    },
+    {
+      "coverage": 0.0,
+      "risk": null,
+      "baseline_coverage": 0.0,
+      "baseline_risk": null
+    },
+    {
+      "coverage": 0.0,
+      "risk": null,
+      "baseline_coverage": 0.0,
+      "baseline_risk": null
+    },
+    {
+      "coverage": 0.0,
+      "risk": null,
+      "baseline_coverage": 0.0,
+      "baseline_risk": null
+    },
+    {
+      "coverage": 0.0,
+      "risk": null,
+      "baseline_coverage": 0.0,
+      "baseline_risk": null
+    },
+    {
+      "coverage": 0.0,
+      "risk": null,
+      "baseline_coverage": 0.0,
+      "baseline_risk": null
+    },
+    {
+      "coverage": 0.0,
+      "risk": null,
+      "baseline_coverage": 0.0,
+      "baseline_risk": null
+    },
+    {
+      "coverage": 0.0,
+      "risk": null,
+      "baseline_coverage": 0.0,
+      "baseline_risk": null
+    },
+    {
+      "coverage": 0.0,
+      "risk": null,
+      "baseline_coverage": 0.0,
+      "baseline_risk": null
+    },
+    {
+      "coverage": 0.0,
+      "risk": null,
+      "baseline_coverage": 0.0,
+      "baseline_risk": null
+    },
+    {
+      "coverage": 0.0,
+      "risk": null,
+      "baseline_coverage": 0.0,
+      "baseline_risk": null
+    }
+  ],
+  "baseline_comparison_available": true,
+  "coverage_matching": "nearest measured test coverage; residual reported, no test-set tuning"
+}

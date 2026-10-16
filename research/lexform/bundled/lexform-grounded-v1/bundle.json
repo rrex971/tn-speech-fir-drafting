@@ -1,0 +1,21 @@
+{
+  "id": "lexform-grounded-v1",
+  "source": "completed local training run",
+  "contains_training_examples": false,
+  "base_encoder": "law-ai/InLegalBERT",
+  "revision": "b5ecfed8ed6cf9d25a3cb8225a8c52f161f7401a",
+  "files": {
+    "result.json": "3959485ba14f659fe5277238ca3f5a7d7229c50cf3a323b9e11cbd0446445855",
+    "history.json": "13d659291860895f82f03e6afb4b58faf2b547abc244b629b72ce2055c64b998",
+    "model.pt": "16f65025564e5f129144cd58fbabcad37f631c4b43a5cad02d8d19c42c6639b6",
+    "calibration.json": "d782b7fd38887e447213f5f9ada9ddfa1550c5e6f55924aedb9c06e09cb06b43",
+    "statute_features.npz": "c2282322cde13282c752c5872776b3f377b86589ab65b13e708e4cedae2599a5",
+    "checkpoint.json": "22b40304863a46697d5b2ba6a0d8a0412e2061567964b6203e2aee9ce52873b5",
+    "learned_forms.json": "fe95aa7473c83db262724f9bbf34a1a3cf0586efdcd190e44e397883020d2f24",
+    "encoder/tokenizer_config.json": "707a0ff2aef431afc0389851827a028afbfd55f0c7243a09ee3e69eea99a25da",
+    "encoder/config.json": "ff8238b199f0448f1a8c28c3a207b09ed53417038de67fc00e1633da7380d34b",
+    "encoder/tokenizer.json": "ae56e2b79e3c2a3cedc8fa1fd72d878c11fe38858eab88ac738afaa2a563d7f5",
+    "evidence/lexform-grounded-v1-calibration/result.json": "1d7061f3d3f20fdbc9f0a2e94b43aa38bbcba922ff1f8bd97824b56508628d97",
+    "evidence/20261016T021922-5ee080f6/result.json": "4a2b256be346cb7a6a81cf8d79ec1f8264caa59efe1ddefa0933ca4c7e44c54b"
+  }
+}

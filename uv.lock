@@ -1,5 +1,5 @@
 version = 1
-revision = 3
+revision = 5
 requires-python = ">=3.11, <3.14"
 resolution-markers = [
     "python_full_version >= '3.12'",
@@ -266,6 +266,15 @@ nvrtc = [
 ]
 nvtx = [
     { name = "nvidia-nvtx", marker = "platform_machine == 'aarch64' or platform_machine == 'x86_64'" },
+]
+
+[[package]]
+name = "diskcache"
+version = "5.6.3"
+source = { registry = "https://pypi.org/simple" }
+sdist = { url = "https://files.pythonhosted.org/packages/3f/21/1c1ffc1a039ddcc459db43cc108658f32c57d271d7289a2794e401d0fdb6/diskcache-5.6.3.tar.gz", hash = "sha256:2c3a3fa2743d8535d832ec61c2054a1641f41775aa7c556758a109941e33e4fc", size = 67916, upload-time = "2023-08-31T06:12:00.316Z" }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/3f/27/4570e78fc0bf5ea0ca45eb1de3818a23787af9b390c0b0a0033a1b8236f9/diskcache-5.6.3-py3-none-any.whl", hash = "sha256:5e31b2d5fbad117cc363ebaf6b689474db18a1f6438bc82358b024abd4c2ca19", size = 45550, upload-time = "2023-08-31T06:11:58.822Z" },
 ]
 
 [[package]]
@@ -646,6 +655,19 @@ sdist = { url = "https://files.pythonhosted.org/packages/7d/bb/4f39a8d864618aab0
 wheels = [
     { url = "https://files.pythonhosted.org/packages/4d/be/d55279f7bfc43763fd479aa526d6f952fa93aaf4d86a40919f78726691cc/langsmith-0.14.0-py3-none-any.whl", hash = "sha256:1a89e52c24edd6f4c24d8cfb32857814ceb5b9bec344a2850e86ab38475de362", size = 805011, upload-time = "2026-09-21T18:59:36.199Z" },
 ]
+
+[[package]]
+name = "llama-cpp-python"
+version = "0.3.36"
+source = { registry = "https://pypi.org/simple" }
+dependencies = [
+    { name = "diskcache" },
+    { name = "jinja2" },
+    { name = "numpy", version = "2.4.6", source = { registry = "https://pypi.org/simple" }, marker = "python_full_version < '3.12'" },
+    { name = "numpy", version = "2.5.3", source = { registry = "https://pypi.org/simple" }, marker = "python_full_version >= '3.12'" },
+    { name = "typing-extensions" },
+]
+sdist = { url = "https://files.pythonhosted.org/packages/ec/e9/e7de2b0463ea3ffbf0ede6cb21b58c1258a8f6521aae45ca773a59fe7cf3/llama_cpp_python-0.3.36.tar.gz", hash = "sha256:832db0699007f1be95a7e41ef12e88926b02ba836461e36a36372db2760c1a2e", size = 76589250, upload-time = "2026-10-01T05:48:01.345Z" }
 
 [[package]]
 name = "markdown-it-py"
@@ -1697,6 +1719,9 @@ dependencies = [
 ]
 
 [package.optional-dependencies]
+decomposition = [
+    { name = "llama-cpp-python" },
+]
 full = [
     { name = "faster-whisper" },
     { name = "huggingface-hub" },
@@ -1723,6 +1748,14 @@ legal = [
     { name = "scipy", version = "1.17.1", source = { registry = "https://pypi.org/simple" }, marker = "python_full_version < '3.12'" },
     { name = "scipy", version = "1.18.1", source = { registry = "https://pypi.org/simple" }, marker = "python_full_version >= '3.12'" },
 ]
+research = [
+    { name = "joblib" },
+    { name = "numpy", version = "2.4.6", source = { registry = "https://pypi.org/simple" }, marker = "python_full_version < '3.12'" },
+    { name = "numpy", version = "2.5.3", source = { registry = "https://pypi.org/simple" }, marker = "python_full_version >= '3.12'" },
+    { name = "scikit-learn" },
+    { name = "torch" },
+    { name = "transformers" },
+]
 speech = [
     { name = "faster-whisper" },
     { name = "huggingface-hub" },
@@ -1743,10 +1776,13 @@ requires-dist = [
     { name = "huggingface-hub", marker = "extra == 'speech'", specifier = ">=0.34,<2" },
     { name = "joblib", marker = "extra == 'full'", specifier = ">=1.5,<2" },
     { name = "joblib", marker = "extra == 'legal'", specifier = ">=1.5,<2" },
+    { name = "joblib", marker = "extra == 'research'", specifier = ">=1.5,<2" },
     { name = "langgraph", marker = "extra == 'full'", specifier = ">=0.6,<2" },
     { name = "langgraph", marker = "extra == 'legal'", specifier = ">=0.6,<2" },
+    { name = "llama-cpp-python", marker = "extra == 'decomposition'", specifier = ">=0.3,<1" },
     { name = "numpy", marker = "extra == 'full'", specifier = ">=2.0,<3" },
     { name = "numpy", marker = "extra == 'legal'", specifier = ">=2.0,<3" },
+    { name = "numpy", marker = "extra == 'research'", specifier = ">=2.0,<3" },
     { name = "nvidia-cublas-cu12", marker = "platform_machine == 'x86_64' and sys_platform == 'linux' and extra == 'full'", specifier = ">=12.4,<13" },
     { name = "nvidia-cublas-cu12", marker = "platform_machine == 'x86_64' and sys_platform == 'linux' and extra == 'speech'", specifier = ">=12.4,<13" },
     { name = "nvidia-cudnn-cu12", marker = "platform_machine == 'x86_64' and sys_platform == 'linux' and extra == 'full'", specifier = ">=9,<10" },
@@ -1758,17 +1794,20 @@ requires-dist = [
     { name = "sacremoses", marker = "extra == 'speech'", specifier = ">=0.1,<1" },
     { name = "scikit-learn", marker = "extra == 'full'", specifier = ">=1.7,<2" },
     { name = "scikit-learn", marker = "extra == 'legal'", specifier = ">=1.7,<2" },
+    { name = "scikit-learn", marker = "extra == 'research'", specifier = ">=1.7,<2" },
     { name = "scipy", marker = "extra == 'full'", specifier = ">=1.15,<2" },
     { name = "scipy", marker = "extra == 'legal'", specifier = ">=1.15,<2" },
     { name = "sentencepiece", marker = "extra == 'full'", specifier = ">=0.2,<1" },
     { name = "sentencepiece", marker = "extra == 'speech'", specifier = ">=0.2,<1" },
     { name = "torch", marker = "extra == 'full'", specifier = ">=2.7,<3" },
+    { name = "torch", marker = "extra == 'research'", specifier = ">=2.7,<3" },
     { name = "torch", marker = "extra == 'speech'", specifier = ">=2.7,<3" },
     { name = "transformers", marker = "extra == 'full'", specifier = ">=4.54,<6" },
+    { name = "transformers", marker = "extra == 'research'", specifier = ">=4.54,<6" },
     { name = "transformers", marker = "extra == 'speech'", specifier = ">=4.54,<6" },
     { name = "uvicorn", extras = ["standard"], specifier = ">=0.35,<1" },
 ]
-provides-extras = ["speech", "legal", "full"]
+provides-extras = ["research", "decomposition", "speech", "legal", "full"]
 
 [[package]]
 name = "tokenizers"

@@ -1,0 +1,56 @@
+.lex-zone { margin-top: 18px; }
+.lex-research-label { margin-right: auto; color: #78878b; font-size: 11px; font-weight: 500; }
+.lex-zone .review-heading h2 { flex: 0; }
+.lex-content { padding: 0 22px 22px; border-top: 1px solid #e6ebe8; }
+.lex-toolbar { display: flex; align-items: center; justify-content: space-between; gap: 18px; margin-bottom: 22px; }
+.lex-toolbar .mantine-Tabs-list { border: 0; gap: 24px; }
+.lex-toolbar .mantine-Tabs-tab { padding: 18px 0 14px; color: #6c7e85; font-size: 13px; }
+.lex-toolbar .mantine-Tabs-tab[data-active] { color: #286e72; border-color: #30797c; }
+.lex-loading { display: flex; justify-content: center; padding: 50px; }
+.lex-subheading { display: flex; align-items: center; justify-content: space-between; gap: 12px; margin-bottom: 14px; }
+.lex-subheading h3 { margin: 0; font-size: 14px; color: #233d46; font-weight: 650; }
+.lex-subheading > span { color: #829096; font-size: 11px; }
+.lex-statute-grid { display: grid; grid-template-columns: 290px minmax(0, 1fr); gap: 25px; }
+.lex-statute-picker .mantine-Select-label, .lex-inspect .mantine-InputWrapper-label { color: #5a727b; font-size: 12px; margin-bottom: 7px; }
+.lex-definition { padding: 23px 0; margin-top: 16px; border-top: 1px solid #e6ebe8; }
+.lex-eyebrow { display: block; color: #8b999e; letter-spacing: 0.09em; font-size: 9px; margin-bottom: 11px; }
+.lex-definition code { display: block; font-size: 14px; color: #486f71; }
+.lex-definition p { font-size: 12px; color: #74868c; margin: 10px 0 18px; }
+.lex-statute-detail { border: 1px solid #e1e7e4; border-radius: 9px; padding: 20px 24px; min-width: 0; }
+.lex-statute-detail h4 { font-size: 15px; margin: 0 0 20px; font-weight: 500; line-height: 1.5; }
+.lex-logical-form { margin: 12px 0 18px; }
+.lex-clause-group { border: 1px solid #d9e7e1; background: #f3f8f5; padding: 13px 15px; border-radius: 7px; }
+.lex-clause-group strong { font-size: 12px; line-height: 1.7; color: #3c5d60; font-weight: 500; display: block; }
+.lex-clause-group small, .lex-clause-group q { display: block; margin-top: 5px; color: #7e8e92; font-size: 11px; line-height: 1.7; }
+.lex-operator { padding: 5px 17px; font-size: 9px; font-weight: 600; letter-spacing: 0.08em; color: #95a8a2; }
+.lex-or { display: block; color: #8b9f98; font-size: 9px; margin: 10px 0; }
+.lex-logical-form > small { display: block; font-size: 10px; color: #8a989b; margin-top: 14px; }
+.lex-source { border-top: 1px solid #e5eae7; padding-top: 15px; }
+.lex-source summary { color: #678087; font-size: 12px; cursor: pointer; }
+.lex-source p { max-height: 360px; overflow: auto; font-size: 12px; color: #667b83; line-height: 1.9; white-space: pre-wrap; padding-right: 10px; }
+.lex-no-form { padding: 20px; margin: 15px 0; background: #f7f9f8; border: 1px dashed #dde5e0; color: #7c8e93; font-size: 12px; line-height: 1.7; border-radius: 7px; }
+.lex-inspect-controls { display: grid; grid-template-columns: minmax(0, 1fr) 160px; gap: 15px; margin-bottom: 20px; }
+.lex-inspect-actions { display: flex; justify-content: space-between; gap: 12px; margin-top: 15px; }
+.lex-predictions { margin-top: 25px; }
+.lex-prediction { padding: 15px; border: 1px solid #e0e7e3; border-radius: 7px; margin-bottom: 8px; }
+.lex-prediction summary { display: flex; align-items: center; gap: 20px; cursor: pointer; font-size: 12px; }
+.lex-prediction summary strong { margin-right: auto; color: #3c656d; }
+.lex-prediction summary > span { color: #85959b; }
+.lex-prediction h4 { margin: 14px 0 6px; font-size: 13px; font-weight: 500; color: #4c6870; }
+.lex-predicate-evidence { display: flex; flex-direction: column; gap: 5px; padding: 14px 0; font-size: 11px; line-height: 1.6; color: #7c9195; }
+.lex-predicate-evidence strong { font-weight: 500; color: #476d71; }
+.lex-group-heading { display: flex; justify-content: space-between; align-items: center; gap: 10px; }
+.lex-group-heading > span { font-size: 11px; color: #70868c; }
+.lex-group-meter { height: 4px; border-radius: 3px; background: #e3ebe6; margin: 6px 0 10px; overflow: hidden; }
+.lex-group-meter > span { display: block; height: 100%; background: #428789; }
+.lex-prediction-footer { display: flex; align-items: center; justify-content: space-between; gap: 12px; padding-top: 10px; border-top: 1px solid #e6ebe8; }
+.lex-prediction-footer small { font-size: 10px; color: #85959b; }
+@media (max-width: 850px) {
+  .lex-statute-grid { grid-template-columns: 1fr; }
+  .lex-toolbar { gap: 10px; }
+  .lex-toolbar .mantine-Tabs-list { gap: 18px; }
+  .lex-toolbar .mantine-Tabs-tab { font-size: 12px; }
+  .lex-prediction summary { flex-wrap: wrap; gap: 10px; }
+  .lex-inspect-actions, .lex-prediction-footer { flex-wrap: wrap; }
+}
+@media print { .lex-zone { display: none !important; } }
